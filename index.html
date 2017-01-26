@@ -9,15 +9,18 @@ title: Beaver Guo, Horrible Cop
 	<a href="/about">Read more about my life...</a></p>
 </div><!-- /.blurb -->
 
-<p>Below is a member list:</p>
+<p>Below is a vc list:</p>
 <table>
-{% for member in site.data.members %}
+{% for member in site.data.vclist %}
   <tr>
     <td>
-      {{ member.name }}
+      {{ member.No }}
     </td>
     <td>
-    	another item
+      {{ member.Name }}
+    </td>
+    <td>
+        {{ member.Type }}
     </td>
   </tr>
 {% endfor %}
