@@ -10,12 +10,15 @@ title: Beaver Guo, Horrible Cop
 </div><!-- /.blurb -->
 
 <p>Below is a member list:</p>
-<ul>
+<table>
 {% for member in site.data.members %}
-  <li>
-    <a>
+  <tr>
+    <td>
       {{ member.name }}
-    </a>
-  </li>
+    </td>
+    <td>
+    	another item
+    </td>
+  </tr>
 {% endfor %}
-</ul>
+</table>
