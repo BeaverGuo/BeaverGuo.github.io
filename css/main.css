@@ -42,8 +42,11 @@ ul.posts li {
     list-style: none;
 }
 
-#header-fixed { 
-    position: fixed; 
-    top: 0px; display:none;
-    background-color:white;
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
 }
