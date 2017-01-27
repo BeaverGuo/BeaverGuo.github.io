@@ -10,7 +10,7 @@ title: Beaver Guo, Horrible Cop
 </div><!-- /.blurb -->
 
 <p>Below is a vc list:</p>
-<div style="height: 800px; overflow: auto;">
+<div>
   <table id="table-1" class="table table-striped header-fixed" style="border-collapse: collapse;">
   <thead align="left" style="background-color: #e2dddd">
       <tr>
@@ -19,6 +19,7 @@ title: Beaver Guo, Horrible Cop
           <th>Type</th>
       </tr>
   </thead>
+  <tbody style="max-height: 700px;overflow: auto;">
   {% for member in site.data.vclist %}
     <tr>
       <td>
@@ -32,6 +33,7 @@ title: Beaver Guo, Horrible Cop
       </td>
     </tr>
   {% endfor %}
+  </tbody>
   </table>
   <table id="header-fixed"></table>
 </div>
