@@ -42,19 +42,43 @@ ul.posts li {
     list-style: none;
 }
 
-.table-fixed thead {
-  width: 97%;
-}
-.table-fixed tbody {
-  height: 230px;
-  overflow-y: auto;
-  width: 100%;
+table.table-fixedheader {
+    width: 100%;   
 }
 
-.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
-  display: block;
+ table.table-fixedheader, table.table-fixedheader>thead, table.table-fixedheader>tbody, table.table-fixedheader>thead>tr, table.table-fixedheader>tbody>tr, table.table-fixedheader>thead>tr>th, table.table-fixedheader>tbody>td {
+    display: block;
 }
-.table-fixed tbody td, .table-fixed thead > tr> th {
-  float: left;
-  border-bottom-width: 0;
+table.table-fixedheader>thead>tr:after, table.table-fixedheader>tbody>tr:after {
+    content:' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+ table.table-fixedheader>tbody {
+    overflow-y: scroll;
+    height: 100px;
+
+}
+
+ table.table-fixedheader>thead {
+    overflow-y: scroll;    
+}
+
+ table.table-fixedheader>thead::-webkit-scrollbar {
+    background-color: inherit;
+}
+
+
+table.table-fixedheader>thead>tr>th:after, table.table-fixedheader>tbody>tr>td:after {
+    content:' ';
+    display: table-cell;
+    visibility: hidden;
+    clear: both;
+}
+
+ table.table-fixedheader>thead tr th, table.table-fixedheader>tbody tr td {
+    float: left;    
+    word-wrap:break-word;     
 }
