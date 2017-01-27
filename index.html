@@ -10,26 +10,27 @@ title: Beaver Guo, Horrible Cop
 </div><!-- /.blurb -->
 
 <p>Below is a vc list:</p>
-<table style="border-collapse: collapse;">
-<thead align="left" style="background-color: #e2dddd">
+<div style="height: 800px; overflow: auto;">
+  <table style="border-collapse: collapse;">
+  <thead align="left" style="background-color: #e2dddd">
+      <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Type</th>
+      </tr>
+  </thead>
+  {% for member in site.data.vclist %}
     <tr>
-        <th>No</th>
-        <th>Name</th>
-        <th>Type</th>
+      <td>
+        {{ member.No }}
+      </td>
+      <td>
+        {{ member.Name }}
+      </td>
+      <td>
+          {{ member.Type }}
+      </td>
     </tr>
-</thead>
-{% for member in site.data.vclist %}
-  <tr>
-    <td>
-      {{ member.No }}
-    </td>
-    <td>
-      {{ member.Name }}
-    </td>
-    <td>
-        {{ member.Type }}
-    </td>
-  </tr>
-{% endfor %}
-
-</table>
+  {% endfor %}
+  </table>
+</div>
