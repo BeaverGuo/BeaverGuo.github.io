@@ -1,4 +1,16 @@
 name: Beaver Guo, Horrible Cop
 markdown: kramdown
 
+collections:
+  my_collection:
+    output: true
+    permalink: /:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: my_collection
+    values:
+      layout: default
+
 permalink: /blog/:year/:month/:day/:title
